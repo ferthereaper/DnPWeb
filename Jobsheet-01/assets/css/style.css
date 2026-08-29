@@ -12,7 +12,7 @@ body {
 }
 
 a {
-    color: #1d5b8a;
+    color: #9b4809;
     text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ a:hover {
 }
 
 header {
-    background-color: #1d5b8a;
+    background-color: #9b4809;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -61,12 +61,19 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #9b4809;
 }
 
-main section:nth-of-type(2) {
+/* main section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+} */
+
+ /* LATIHAN 2 JS 2*/
+ main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -80,13 +87,13 @@ main section:nth-of-type(2) article {
 main section:nth-of-type(2) article h3 {
     font-size: 0.95rem;
     color: #55677a;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5 rem;
 }
 
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #9b4809;
 }
 
 table {
@@ -101,7 +108,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #9b4809;
     color: #fff;
 }
 
@@ -122,7 +129,16 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+/* LATIHAN NO 3 JS 2 */
+td button.button-edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+td button.button-detail {
+    background-color: #d5d4d4;
+    color: #fff;
+}
+td button.button-hapus {
     background-color: #d9534f;
     color: #fff;
 }
@@ -149,7 +165,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #9b4809;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
