@@ -21,7 +21,9 @@ a:hover {
 }
 
 header {
+    /* LATIHAN 1 JS 2*/
     background-color: #9b4809;
+    
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
