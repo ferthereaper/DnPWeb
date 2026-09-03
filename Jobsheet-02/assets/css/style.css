@@ -79,6 +79,10 @@ section h2 {
     gap: 1rem;
 }
 
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
+}
+
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
     border-radius: 8px;
@@ -89,7 +93,7 @@ main section:nth-of-type(2) article {
 main section:nth-of-type(2) article h3 {
     font-size: 0.95rem;
     color: #55677a;
-    margin-bottom: 0.5 rem;
+    margin-bottom: 0.5rem;
 }
 
 main section:nth-of-type(2) article p {
@@ -105,7 +109,7 @@ table {
 
 th, td {
     text-align: left;
-    padding: 0,65rem 0.75rem;
+    padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
 }
 
