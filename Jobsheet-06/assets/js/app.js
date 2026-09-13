@@ -10,7 +10,9 @@ function initNavToggle() {
 
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
-        const btn = e.target.closest(".btn-hapus");
+        console.log("Elemen yang diklik:", e.target);
+        
+        const btn = e.target.closest(".button-hapus");
         if (!btn) return;
 
         const row = btn.closest("tr");
@@ -18,6 +20,10 @@ function initHapusConfirm() {
         const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
         if (yakin && row) {
             row.remove();
+
+            if (typeof updateCounter === "function") {
+                updateCounter();
+            }
         }
     });
 }
@@ -101,6 +107,30 @@ function initValidasiForm() {
             e.preventDefault();
         }
     });
+}
+
+// JS 6 Latihan 2
+async function muatDataTabel(urlJson, selectorTbody, renderCallback) {
+    const tbody = document.querySelector(selectorTbody);
+    const loading = document.getElementById("loading-indicator");
+    if (!tbody) return;
+
+    try {
+        if (loading) loading.style.display = "block";
+        tbody.innerHTML = "";
+
+        const response = await fetch(urlJson);
+        const data = await response.json();
+
+        // Simulasi jeda / delay
+        await new Promise(resolve => setTimeout(resolve, 600));
+
+        renderCallback(data, tbody);
+    } catch (error) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: red;">Gagal memuat data.</td></tr>`;
+    } finally {
+        if (loading) loading.style.display = "none";
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
